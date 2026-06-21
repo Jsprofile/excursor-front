@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Excursor",
-  description: "Excursor - Explore o mundo com a gente",
+  description: "Excursornpx prisma generate - Explore o mundo com a gente",
 };
 
 export default function RootLayout({
