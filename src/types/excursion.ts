@@ -21,4 +21,7 @@ export interface Excursion {
     name: string;
   };
   ticketTypes: TicketType[];
+  destination: string | null;
+  returnLocation: string | null;
+  departureLocation: string | null;
 }

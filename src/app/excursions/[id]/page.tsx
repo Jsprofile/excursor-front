@@ -71,14 +71,6 @@ export default async function ExcursionDetailPage({
             <h2 className="text-lg font-bold text-gray-700">Informações</h2>
 
             <div className="flex items-start gap-3">
-              <span className="text-2xl">📍</span>
-              <div>
-                <p className="text-xs text-gray-400 uppercase font-semibold">Local de saída</p>
-                <p className="text-gray-700 font-medium">{excursion.location}</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3">
               <span className="text-2xl">📅</span>
               <div>
                 <p className="text-xs text-gray-400 uppercase font-semibold">Data e horário</p>
@@ -94,6 +86,39 @@ export default async function ExcursionDetailPage({
                 <p className="text-gray-700 font-medium">{excursion.totalSlots} vagas</p>
               </div>
             </div>
+
+            {/* Local de Destino */}
+            {excursion.destination && (
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🏁</span>
+                <div>
+                  <p className="text-xs text-gray-400 uppercase font-semibold">Local de destino</p>
+                  <p className="text-gray-700 font-medium">{excursion.destination}</p>
+                </div>
+              </div>
+            )}
+
+            {/* Local de Embarque (Retorno) */}
+            {excursion.returnLocation && (
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">📍</span>
+                <div>
+                  <p className="text-xs text-gray-400 uppercase font-semibold">Embarque (Ida)</p>
+                  <p className="text-gray-700 font-medium">{excursion.departureLocation}</p>
+                </div>
+              </div>
+            )}
+
+            {/* Local de Desembarque (Retorno) */}
+            {excursion.returnLocation && (
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🔄</span>
+                <div>
+                  <p className="text-xs text-gray-400 uppercase font-semibold">Desembarque (volta)</p>
+                  <p className="text-gray-700 font-medium">{excursion.returnLocation}</p>
+                </div>
+              </div>
+            )}
           </div>
 
           {excursion.description && (
