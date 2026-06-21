@@ -29,10 +29,6 @@ export function ExcursionCard({ excursion }: Props) {
         </h2>
 
         <p className="text-sm text-gray-500 flex items-center gap-1">
-          📍 {excursion.location}
-        </p>
-
-        <p className="text-sm text-gray-500 flex items-center gap-1">
           📅 {formattedDate}
         </p>
 
